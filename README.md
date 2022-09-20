@@ -74,3 +74,10 @@ We will have a Q & A session to help you get clarity on concepts that might not 
 Week 02 challenge - 
 It is important that you put in the required hours to make this initiative a success.
 
+<!-- Copy-paste in your Readme.md file -->
+
+<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo = GitHub_username/repository_name"/>
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
