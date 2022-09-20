@@ -5,7 +5,8 @@ Group12 Natujenge #Overcome-Your-Fear-Bootcamp
 
 Natujenge SWE Virtual Boot Camp  Week 01 Challenge
 Issue date: 19th September 2022
-1. Objectives 
+
+<h1>1. Objectives</h2> 
 At the end of the week, we would like each participant to have a good understanding of the following: 
 
 Create a responsive  UI for tax calculation app
@@ -19,7 +20,7 @@ Create UI card to display the taxed salary breakdown
 Consider NHIF / NSSF default values, PAYE percentages in the final breakdown 
 Eg:
 
-NSSF Contribution
+<h5>NSSF Contribution</h5>
 Ksh. 1,080.00
 Personal Relief
 Ksh. 2,400.00
@@ -37,14 +38,14 @@ Create an action to add more bills to the list
 Create capability to edit / remove default keys
 BONUS : Add warning (color coded , preferably red) if balance after bill calculations is below 20% of total net , and green if within safe amount
 
-Teams page 
+<h5>Teams page</h5> 
 Add a teams page showcasing the members involved in creating the exercise including clickable links to their social media or Github accounts. (Agree on the design layout within the team)
 Add a teams link to the navbar
 
 Link to the Natujenge SVG logo .
 Link to the Figma designs ,  remember this is just a guide, you’re free to add your own styles and colors to really personalize the look and feel .
 
-GIT 
+<h5>GIT</h5> 
 How to use Gitflow (https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 Main branch
 Development branch
@@ -52,7 +53,7 @@ Individual team member branches
 
 <img src="https://www.figma.com/file/gVqxZjOXmxHysP5wRkajKr/Tax-manager?node-id=2%3A2" alt="">
 
-2. Recommend Resources 
+<1>2. Recommend Resources</h1> 
 Below is a list of resources that can help you in appreciating above concepts: 
 
 HTML / CSS
@@ -64,8 +65,9 @@ GIT
 https://education.github.com/git-cheat-sheet-education.pdf   
 
 
-In case you have good resources that can be helpful to the team, please share with us on natujenge@meliora.tech. 
-3. Future Work 
+In case you have good resources that can be helpful to the team, please share with us on natujenge@meliora.tech.
+
+<h1>3. Future Work</h2> 
 Upcoming events:
 Q&A session(s) 
 We will have a Q & A session to help you get clarity on concepts that might not be clear. 
