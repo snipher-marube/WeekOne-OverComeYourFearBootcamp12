@@ -76,8 +76,7 @@ It is important that you put in the required hours to make this initiative a suc
 
 <!-- Copy-paste in your Readme.md file -->
 
-<a href = "https://github.com/WeekOne-OverComeYourFearBootcamp12
-/graphs/contributors">
+<a href = "https://github.com/snipher-marube/WeekOne-OverComeYourFearBootcamp12/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo = GitHub_username/repository_name"/>
 </a>
 
