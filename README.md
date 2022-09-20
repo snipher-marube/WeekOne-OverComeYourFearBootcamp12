@@ -1,7 +1,7 @@
 # WeekOne-OverComeYourFearBootcamp12
 Group12 Natujenge #Overcome-Your-Fear-Bootcamp
 
-https://natujenge.ke/assets/images/logo-wordmark.svg
+<img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="">
 
 Natujenge SWE Virtual Boot Camp  Week 01 Challenge
 Issue date: 19th September 2022
@@ -50,7 +50,7 @@ Main branch
 Development branch
 Individual team member branches  
 
-https://www.figma.com/file/gVqxZjOXmxHysP5wRkajKr/Tax-manager?node-id=2%3A2
+
 
 2. Recommend Resources 
 Below is a list of resources that can help you in appreciating above concepts: 
