@@ -53,7 +53,7 @@ Individual team member branches
 
 <img src="https://www.figma.com/file/gVqxZjOXmxHysP5wRkajKr/Tax-manager?node-id=2%3A2" alt="">
 
-<1>2. Recommend Resources</h1> 
+<h1>2. Recommend Resources</h1> 
 Below is a list of resources that can help you in appreciating above concepts: 
 
 HTML / CSS
