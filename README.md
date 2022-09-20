@@ -50,7 +50,7 @@ Main branch
 Development branch
 Individual team member branches  
 
-
+<img src="https://www.figma.com/file/gVqxZjOXmxHysP5wRkajKr/Tax-manager?node-id=2%3A2" alt="">
 
 2. Recommend Resources 
 Below is a list of resources that can help you in appreciating above concepts: 
