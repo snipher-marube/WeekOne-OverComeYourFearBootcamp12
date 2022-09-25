@@ -110,6 +110,145 @@ nav {
     font-size: 0.9rem;
 }
 
+section.about-us {
+    color: #f6efef;
+    background-color: #343232;
+    margin: 10px 10px;
+}
+
+#wowslider-container1 {
+    display: table;
+    zoom: 1;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    max-height: 360px;
+    margin: 0px auto 0px;
+    z-index: 90;
+    text-align: left;
+    font-size: 10px;
+    text-shadow: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#wowslider-container1 .ws_images {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    max-height: 360px;
+    max-width: 400px;
+    vertical-align: top;
+    border: none;
+    overflow: hidden;
+}
+
+
+#wowslider-container1 .ws_images ul {
+    position: relative;
+    width: 10000%;
+    height: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    overflow: visible;
+}
+
+#wowslider-container1 .ws_images ul li {
+    position: relative;
+    width: 1%;
+    height: 100%;
+    line-height: 0;
+    overflow: hidden;
+    float: left;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+}
+
+#wowslider-container1 .ws_images ul a {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    display: block;
+    color: transparent;
+}
+
+#wowslider-container1 img {
+    max-width: none !important;
+}
+
+#wowslider-container1 .ws_images .ws_list img, #wowslider-container1 .ws_images > div > img {
+    width: 100%;
+    border: none 0;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wowslider-container1 .ws_images > div > img {
+    max-height: 360px;
+}
+
+#wowslider-container1 .ws_images iframe {
+    position: absolute;
+    z-index: -1;
+}
+
+#wowslider-container1 .ws-title > div {
+    display: inline-block !important;
+}
+
+#wowslider-container1 a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#wowslider-container1 .ws_bullets {
+    float: left;
+    position: absolute;
+    z-index: 70;
+}
+
+#wowslider-container1 .ws_bullets div {
+    position: relative;
+    float: left;
+    font-size: 0px;
+}
+
+#wowslider-container1 .ws_bullets a {
+    line-height: 0;
+}
+
+#wowslider-container1 .ws_script {
+    display: none;
+}
+
+#wowslider-container1 sound, #wowslider-container1 object {
+    position: absolute;
+}
+
+#wowslider-container1 .ws_effect {
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+
+#wowslider-container1 .ws_photoItem {
+    border: 2em solid #fff;
+    margin-left: -2em;
+    margin-top: -2em;
+}
+
+#wowslider-container1 .ws_cube_side {
+    background: #A6A5A9;
+}
+
+
+
 
 
 
