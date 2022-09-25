@@ -86,9 +86,109 @@
     </div>
   </section>
 
+  <div class="row top">
+    <ul class="gross-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tax Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Bill Manager</a>
+      </li>
+    </ul>
+  </div>
 
 
-  <section style="background-color: rgb(176,172,172)" id="team">
+
+  <div class="col-md-12" >
+    <!--piechart-->
+        <div class="piechart pie float-end me-0 d-flex"></div>
+  </div>
+
+  <div class="col-md-6" style="padding-left: 18px">
+    <h4 class="heading text-center">Gross salary</h4>
+      <form class="row text-center" style="padding-left: 18px">
+
+        <input type="text" name="salary" placeholder="Enter your gross salary">
+        <button class="btn btn-secondary" type="submit">Submit</button>
+      </form>
+    <div class="card">
+      <div class="card-header bg-black"></div>
+      <div class="card-body">
+          <div class="row mx-3">
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Amount</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Net Pay</td>
+                <td><i class="fas fa-dollar-sign"></i> 500,00</td>
+              </tr>
+              <tr>
+                <td>Shopping</td>
+                <td><i class="fas fa-dollar-sign"></i> 300,00</td>
+              </tr>
+              <tr>
+                <td>Electricity Bill</td>
+                <td><i class="fas fa-dollar-sign"></i> 1000,00</td>
+              </tr>
+              <tr>
+                <td>Water Bill</td>
+                <td><i class="fas fa-dollar-sign"></i> 5000,00</td>
+              </tr>
+              <tr>
+                <td>Transport</td>
+                <td><i class="fas fa-dollar-sign"></i> 5000,00</td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="row">
+            <div class="col-xl-8">
+              <ul class="list-unstyled float-end me-0">
+                <li><span class="me-3 float-start">Total Amount:</span>
+                  <i class="fas fa-dollar-sign"></i> 6850,00
+                </li>
+                <li> <span class="me-5">Discount:</span>
+                  <i class="fas fa-dollar-sign"></i> 500,00
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xl-8" style="margin-left:60px">
+              <p class="float-end"
+                 style="font-size: 30px; color: red; font-weight: 400;font-family: Arial, Helvetica, sans-serif;">
+                Total:
+                <span><i class="fas fa-dollar-sign"></i> 6350,00</span></p>
+            </div>
+
+          </div>
+
+          <div class="row mt-2 mb-5">
+            <p class="fw-bold">Date:
+              <span class="text-muted">25 Sep 2022</span>
+            </p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+  </div>
+
+
+
+
+
+  <section style="background-color: rgb(176,172,172); padding-top: 50px;" id="team">
     <div class="container">
       <div class="row text-center">
         <div class="col-xl-3 col-sm-6 mb-5">
@@ -294,7 +394,7 @@
           </div>
         </div>
         <div class="col-md-8 abt-right">
-          <h1 class="text-center">Heading</h1>
+          <h1 class="text-center">Natujenge Bootcamp</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur labore ab sequi delectus. Consequatur eos similique, harum at laudantium eveniet asperiores, tenetur, quae quis dicta debitis illo voluptas nulla numquam!</p><button class="btn btn-primary abt-right-btn" type="button">Button</button>
         </div>
       </div>

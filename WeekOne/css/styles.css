@@ -246,6 +246,66 @@ section.about-us {
 #wowslider-container1 .ws_cube_side {
     background: #A6A5A9;
 }
+.top .gross-nav{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.top .gross-nav .nav-item a {
+    color: #444437;
+    font-size: 25px;
+}
+.top .gross-nav .nav-item a:hover{
+    color: #e50704;
+    border-bottom: #343232 solid 2px;
+}
+
+.main {
+
+    gap: 1.5rem;
+    margin: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.main .main-form {
+    flex: 1 1 30rem;
+
+}
+input {
+    border-color: #cecccc;
+    background: transparent;
+}
+.chart {
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 30%;
+}
+.piechart {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+            #151598 0.55% 6.08%,
+            #118311 6.08% 13.68%,
+            #abab27 13.68% 23.27%,
+            #bd841c 23.27% 40.47%,
+            #861919 40.47%);
+}
+
+
+
+@media (min-width:800px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+
+
+
 
 
 
