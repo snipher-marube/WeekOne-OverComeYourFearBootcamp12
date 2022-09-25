@@ -1,0 +1,83 @@
+header {
+    background-color: #F5F5F5;
+}
+
+
+.logo {
+    width:212px;
+    height: 61px;
+}
+
+.home {
+    padding: 20px 120px 0px 120px;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.bootcamp {
+    padding: 20px 120px 0px 120px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: regular;
+    color: #000000;
+}
+
+.link {
+    padding: 20px 120px 0px 120px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.rectangle1 {
+    width:1391px; 
+    height: 5px;
+    top: 117px;
+    left: 51px;
+    color: #D9D9D9
+}
+
+#t1 {
+    background-color: #F5F5F5;
+}
+
+
+footer {
+    margin: 5px;
+    background-color: #E5E4E2;
+    text-align: center;
+}
+
+a:link {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #00A86B;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #00A86B;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .foot {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
