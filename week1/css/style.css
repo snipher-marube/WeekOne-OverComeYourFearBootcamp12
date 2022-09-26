@@ -5,57 +5,40 @@
 }
 
 nav {
-    margin-left: 17px;
-    border-bottom: 2px solid rgb(149,149,149);
-    filter: blur(0px);
-    backdrop-filter: blur(17px);
     position: sticky;
+    top: 0;
+    padding-left: 1rem !important;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    /* z-index: 1020; */
+    border-bottom: 2px solid rgb(149,149,149);
+    /* filter: blur(0px);
+    backdrop-filter: blur(17px); */
 }
 
 .logo {
-    width:212px;
-    height: 61px;
+    width:150px;
+    height: 31.5px;
 }
 
-/* .link1 {
-    width: 900px;
-    padding-left: 350px;
-} */
-.home {
-    margin: 0px 40px 0px 40px;
-    text-align: left;
+.links {
+    margin: 0px 0px 0px 450px;
     font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.bootcamp {
-    margin: 0px 40px 0px 40px;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
-    font-style: regular;
-}
-
-
-.link {
-    margin: 0px 40px 0px 40px;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 550;
 }
 
 #t1 {
     background-color: #F5F5F5;
 }
 
-
-
-
 a:link {
-    color: rgb(149,149,149);
+    color: #000000;
     background-color: transparent;
     text-decoration: none;
+    margin: 0px 20px 0px 20px;
   }
   
   a:visited {
