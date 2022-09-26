@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Manager</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <!--Body-->
+    
+<body>
+    <nav class="nav">
+            
+        <a class="navbrand"><img src="images.png" alt = "Natujenge"/></li></a>
+        <ul class="nav-list">   
+         <li><a href="index.html" class="active">Home</a></li>
+         <li><a href="about.html" >About BootCamp</a></li>
+         <li><a href="team.html" >Team</a></li>
+        </ul>
+    </nav>
+    <hr class="border-line">
+
+    <main class="main">
+        <div class="row" id="row">
+            <div class="column">
+                <a href="index" class="link"><h3>Tax Calculator</h3></a>
+            </div>
+            <div class="column">
+               <a href="bill manager.html" class="link active"><h3>Bill Manager</h3></a>
+            </div>
+        </div>
+<!--net pay and bills form-->
+        <div>
+            <form action="" method="" class="form" id="form-bills">
+                <div>
+                
+                    <label for="salary" class="label" id="label" type="text">Net Salary</label><br><br>
+                    <label for="amount" class="label" type="text" id="amounts">KSH:</label>
+                    <input type="number" name="number" id="salary">
+                    <button type="button" id="submit" onclick="submitFunction()">submit</button>
+                </div>
+                <br>
+            
+                <div class="bill-manager">
+                    <label for="rent"class="label" type="text">Rent</label>
+                    <input type="number" class="bills" id="rent" ><br><br>
+                    <label for="shopping" class="label">Shopping</label>
+                    <input type="number" name="shopping" id="shopping" class="bills"><br><br>
+                    <label for="Electricity Bill"class="label">Electricity Bill</label>
+                    <input type="number" name="electricity bill" id="electricity-bill" class="bills"><br><br>
+                    <label for="water bill" class="label">Water Bill</label>
+                    <input type="number" name="water bill" id="water-bill" class="bills"><br><br>
+                    <label for="transport" class="label">Transport</label>
+                    <input type="number" name="transport" id="transport" class="bills"><br>
+                    <br>
+                    <p>Total:</p><input type="text" name="total" id="total" >
+                    <p>Balance:</p><input type="text" name="balance" id="balance">
+                    <button type="button" id ="add" class="add" onclick="myFunction()">Bills Total</button>
+                    <button type="button" id="list" onclick="listFunction()">add</button>
+                </div>
+            
+            </form>
+        </div>
+    </main>
+
+
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>
