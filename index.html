@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Natujenge</title>
+</head>
+
+<body>
+    <!-- page header -->
+    <section class="header">
+        <div class="logo">
+            <img id="logo" src="/resources/logo.svg" alt="Natujenge" width="150px">
+        </div>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#" id="active">Home</a></li>
+                <li><a href="/about.html" id="">About Bootcamp</a></li>
+                <li><a href="#" id="">Team</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- page main -->
+    <section class="main">
+        <div id="top" class="main_top">
+            <div id="tab-one" class="active" onclick="changeBackActiveTab(); showTaxCalculator()">
+                <span>Tax Calculator</span>
+            </div>
+            <div id="tab-two" class="not-active" onclick="changeActiveTab(); showBillManager()">
+                <span>Bill Manager</span>
+            </div>
+        </div>
+
+        <div id="content" class="main_content">
+            <div class="main_content_gross" id="gross">
+                <span>Gross Salary</span>
+                <div id="gross-input">
+                    <span>Ksh:</span>
+                    <input type="text">
+                    <button>
+              <span>Submit</span>
+            </button>
+                </div>
+            </div>
+            <div class="main_content_bills" id="bills">
+                <span>Net Salary</span>
+                <div id="bills_input">
+                    <span>Ksh:</span>
+                    <input type="text" id="salary">
+                    <button id="submit" onclick="submitFunction()">
+              <span>Submit</span>
+            </button>
+                </div>
+            </div>
+
+            <div class="main_content_result" id="result">
+                <div class="main_content_result_tax" id="result-tax">
+                    <div>
+                        <span>Net Pay</span>
+                        <span>Ksh x</span>
+                    </div>
+                    <div>
+                        <span>NSSF Contribution</span>
+                        <span>Ksh y</span>
+                    </div>
+                    <div>
+                        <span>Taxable Pay</span>
+                        <span>Ksh y</span>
+                    </div>
+                    <div>
+                        <span>Insurance Relief</span>
+                        <span>Ksh r</span>
+                    </div>
+                    <div>
+                        <span>Personal Relief</span>
+                        <span>Ksh r</span>
+                    </div>
+                    <div>
+                        <span>Pay as you Earn(PAYE)</span>
+                        <span>Ksh z</span>
+                    </div>
+                    <div>
+                        <span>Pay after Tax</span>
+                        <span>Ksh x</span>
+                    </div>
+                    <div>
+                        <span>Net Income</span>
+                        <span>Ksh r</span>
+                    </div>
+                    <div>
+                        <span>Total Tax</span>
+                        <span>Ksh. g</span>
+                    </div>
+                    <div class="main_content_result_footer">
+                        <span onclick="showBillManager(); changeActiveTab()">Manage Bills</span>
+                    </div>
+                </div>
+                <div class="main_content_result_bills" id="result-bills">
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Rent</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="rent" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>shopping</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="shopping" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Electricity</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="electricity-bill" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Water Bills</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="water-bill" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Transport</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="transport" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Total</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input readonly id= "total" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Balance</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input readonly id="balance"type="text">
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div id="result-button">
+                        <button onclick="showModal()" >
+                <span>Add</span>
+              </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="modal" class="modal hide">
+        <div>
+            <span>Enter New Bill Category:</span>
+            <input id="bill-category" type="text">
+            <span>Enter Said Bill Amount:</span>
+            <input id="bill-amount" type="text">
+            <button onclick="getInput()">
+          <span>Submit</span>
+        </button>
+        </div>
+    </section>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="bills.js"></script>
+</body>
+
+</html>
