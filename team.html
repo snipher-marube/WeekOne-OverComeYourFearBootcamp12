@@ -4,24 +4,301 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+    <title>Tax Calculator</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.svg">
+
+    <!--custom css-->
+    <!--snipher-->
+    <link rel="stylesheet" href="css/snipher.css" type="text/css">
+    <!--martin-->
     <link rel="stylesheet" href="css/index.css">
-    <title>Document</title>
+
+    <!--bootsrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!--fontawesome icons-->
+  <script src="https://kit.fontawesome.com/2897fee97b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="header">
+    <section class="header sticky-top ps-3">
         <div class="logo">
-
+            <img id="logo" src="resources/logo.svg" alt="Natujenge" width="150px">
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="/index.html" id="">Home</a></li>
-                <li><a href="/about.html" id="">About Bootcamp</a></li>
-                <li><a href="#" id="active">Team</a></li>
+                <li><a href="index.html" id="">Home</a></li>
+                <li><a href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm" target="_blank">About Bootcamp</a></li>
+                <li><a href="team.html" id="active">Team</a></li>
             </ul>
         </div>
     </section>
+    <!-- page header -->
+      <!-- <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid position-relative">
+                <a class="navbar-brand" href="/index.html">
+                    <img id="logo" src="resources/logo.svg" alt="Natujenge logo" width="150px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent"
+                    aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-light" id="navbarcontent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item hover-not">
+                            <a class="nav-link" href="https://www.meliora.co.ke/articles/nvrjgtnsgh5ophs6mm" target="_blank">About Bootcamp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </header> -->
+
+    <!--Sniphers Code-->
+    <section style="background-color: rgb(176,172,172); padding-top: 50px;" id="team">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="https://assets.weforum.org/editor/Vxgt_VzBQPkt_qWpXjADtCM12m_PKk63nZGuvJysHmo.jpg" alt="snipher image" width="100" />
+                <h5 class="mb-0">Molly Ouma</h5>
+                <span class="small text-uppercase text-muted">Frontend Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="resources/snipher.jpg" alt="snipher image" width="100" />
+                <h5 class="mb-0">Snipher Marube</h5>
+                <span class="small text-uppercase text-muted">Backend Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" alt="snipher image" width="100" />
+                <h5 class="mb-0">Victor Magiri</h5>
+                <span class="small text-uppercase text-muted">Backend Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" alt width="100" />
+                <h5 class="mb-0">Bonface Mutea</h5>
+                <span class="small text-uppercase text-muted">Backend Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="https://github.com/tevish321" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-1.jpg" alt width="100" />
+                <h5 class="mb-0">Zack Aduoli</h5>
+                <span class="small text-uppercase text-muted">FullStack Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-7.jpg" alt width="100" />
+                <h5 class="mb-0">Martin Kagendo</h5>
+                <span class="small text-uppercase text-muted">Backend Developer</span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="social-link" href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- <section class="about-us">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-danger text-center">About us</h1>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row padding-content">
+            <div class="col-md-4 no-padding">
+              <div id="wowslider-container1">
+                <div class="ws_images">
+                  <ul>
+                    <li><img id="wows1_0" src="resources/logo.svg" style="width: 300px;"/></li>
+                    <li><img id="wows1_1" src="resources/logo.svg" style="width: 300px;" /></li>
+                    <li><img id="wows1_2" src="resources/logo.svg" style="width: 300px;" /></li>
+                    <li><img id="wows1_3" src="resources/logo.svg" style="width: 300px;" /></li>
+                    <li><img id="wows1_4" src="resources/logo.svg" style="width: 300px;" />
+                      <div>Custom Code</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ws_script" href="http://wowslider.net" style="position: absolute;left: -99%;"><a href="http://wowslider.net">javascript image slider</a><strong>Bold</strong></div>
+                <div class="ws_shadow"></div>
+              </div>
+            </div>
+            <div class="col-md-8 abt-right">
+              <h1 class="text-center">Natujenge Bootcamp</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur labore ab sequi delectus. Consequatur eos similique, harum at laudantium eveniet asperiores, tenetur, quae quis dicta debitis illo voluptas nulla numquam!</p><button class="btn btn-primary abt-right-btn" type="button">Button</button>
+            </div>
+          </div>
+        </div>
+    </section> -->
+
+    <footer class="text-center">
+      <div class="container text-muted py-4 py-lg-5">
+        <ul class="list-inline">
+          <li class="list-inline-item me-4">
+            <a class="link-secondary" href="#">Home</a></li>
+          <li class="list-inline-item me-4">
+            <a class="link-secondary" href="#">About Bootcamp</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="link-secondary" href="#team">Team</a>
+          </li>
+        </ul>
+        <p class="mb-0">&copy 2022</p>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
