@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Natujenge</title>
+    <title>Tax Calculator</title>
+    <link rel="icon" type="image/x-icon" href="resources/logo.svg">
 </head>
 
 <body>
     <!-- page header -->
     <section class="header">
         <div class="logo">
-            <img id="logo" src="/resources/logo.svg" alt="Natujenge" width="150px">
+            <img id="logo" src="resources/logo.svg" alt="Natujenge" width="150px">
         </div>
         </div>
         <div class="nav-links">
@@ -50,8 +52,8 @@
                 <span>Net Salary</span>
                 <div id="bills_input">
                     <span>Ksh:</span>
-                    <input type="text">
-                    <button>
+                    <input type="text" id="salary">
+                    <button id="submit" onclick="submitFunction()">
               <span>Submit</span>
             </button>
                 </div>
@@ -105,12 +107,69 @@
                             <span>Rent</span>
                             <div>
                                 <span>Ksh</span>
-                                <input readonly value="18000" type="text">
+                                <input id="rent" type="text">
                             </div>
                         </div>
                     </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>shopping</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="shopping" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Electricity</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="electricity-bill" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Water Bills</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="water-bill" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Transport</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input id="transport" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Total</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input readonly id= "total" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result-bills-list">
+                        <div id="result-bill">
+                            <span>Balance</span>
+                            <div>
+                                <span>Ksh</span>
+                                <input readonly id="balance"type="text">
+                            </div>
+                        </div>
+                    </div>
+                
+                
                     <div id="result-button">
-                        <button onclick="showModal()">
+                        <button onclick="showModal()" >
                 <span>Add</span>
               </button>
                     </div>
@@ -130,6 +189,6 @@
         </div>
     </section>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/bills.js"></script>
 </body>
-
 </html>
