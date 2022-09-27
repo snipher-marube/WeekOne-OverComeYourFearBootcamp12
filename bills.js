@@ -154,7 +154,7 @@ function listFunction()
         amountInput.setAttribute("type", "number");
         amountInput.setAttribute("name", "amount");
         amountInput.setAttribute("placeholder", "amount");
-        amountInput.setAttribute("id", "count")
+        amountInput.setAttribute("id", count)
         
         let Linebreak = document.createElement("br");
         document.getElementById('bill-add').append(labelInput , amountInput);
