@@ -31,14 +31,10 @@ function noNavItemHoverOnLgScreen() {
   const monitoredNavItemToArr = Array.from(monitoredNavItem);
 
   if (mql.matches) {
-    console.log("it matches");
-
     monitoredNavItemToArr.forEach((item) => {
       item.classList.add(["hover-not"]);
     });
   } else {
-    console.log("it DOES NOT matches");
-
     monitoredNavItemToArr.forEach((item) => {
       item.classList.remove(["hover-not"]);
     });
