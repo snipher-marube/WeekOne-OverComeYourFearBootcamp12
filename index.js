@@ -1,3 +1,6 @@
+// Global Variables
+// count is a global variable that assigns a unique id to every added category
+var count = 0;
 function showTaxCalculator(){
     document.getElementById('bills').style.display = 'none';
     document.getElementById('result-bills').style.display = 'none';
@@ -44,7 +47,10 @@ function showTaxCalculator(){
     const result_bill_div_span = document.createElement('span');
     const result_bill_div_input = document.createElement('input');
     result_bill_div_span.innerHTML = 'Ksh.';
+    result_bill_div_input.setAttribute('id',count);
     result_bill_div_input.value = amount;
+    // count is a global variable that assigns a unique id to every added category
+    count++;
   
     // implemementation
     document.getElementById('result-bills-list').appendChild(result_bill).appendChild(result_bill_div).appendChild(result_bill_div_span).append(result_bill_div_input);

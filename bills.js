@@ -112,15 +112,12 @@ function submitFunction()
             let idVal = document.getElementById(i.toString());
             if(idVal != null){
                 otherBills += parseInt(idVal.value);
-                console.log(otherBills);
             }
             else{
                 break;
             }
         }
     }
-
-    console.log(otherBills);
     // Do the addition
     const sum = rent + shopping + electricity + water + transport + otherBills;
     // inject sum and balance value to page
@@ -141,28 +138,29 @@ else
 }
 
 //function to add categories to the form
-function listFunction()
-{
-        if(count < 50)
-        {
-        let labelInput = document.createElement("input");
-        labelInput.setAttribute("type", "text" );
-        labelInput.setAttribute("name", "Bills");
-        labelInput.setAttribute("placeholder", "bills");
+// Not needed at this point
+// function listFunction()
+// {
+//         if(count < 50)
+//         {
+//         let labelInput = document.createElement("input");
+//         labelInput.setAttribute("type", "text" );
+//         labelInput.setAttribute("name", "Bills");
+//         labelInput.setAttribute("placeholder", "bills");
 
-        let amountInput= document.createElement("input");
-        amountInput.setAttribute("type", "number");
-        amountInput.setAttribute("name", "amount");
-        amountInput.setAttribute("placeholder", "amount");
-        amountInput.setAttribute("id", count)
+//         let amountInput= document.createElement("input");
+//         amountInput.setAttribute("type", "number");
+//         amountInput.setAttribute("name", "amount");
+//         amountInput.setAttribute("placeholder", "amount");
+//         amountInput.setAttribute("id", count)
         
-        let Linebreak = document.createElement("br");
-        document.getElementById('bill-add').append(labelInput , amountInput);
-        document.getElementById('bill-add').append(Linebreak);
+//         let Linebreak = document.createElement("br");
+//         document.getElementById('bill-add').append(labelInput , amountInput);
+//         document.getElementById('bill-add').append(Linebreak);
 
-        count++;
-        }
+//         count++;
+//         }
         
-    }
+//     }
     
  
