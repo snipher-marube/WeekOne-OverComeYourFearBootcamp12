@@ -67,13 +67,8 @@ https://education.github.com/git-cheat-sheet-education.pdf
 
 In case you have good resources that can be helpful to the team, please share with us on natujenge@meliora.tech.
 
-<h1>3. Future Work</h2> 
-Upcoming events:
-Q&A session(s) 
-We will have a Q & A session to help you get clarity on concepts that might not be clear. 
-Week 02 challenge - 
-It is important that you put in the required hours to make this initiative a success.
-
+<h3>3. Figma Design</h5>
+  wwww.figma.com/file/SA2vz4Ccs8Fbb9A96w01O4/Natujenge-GROUP-12?node-id=0%3A1
 <!-- Copy-paste in your Readme.md file -->
 
 <a href = "https://github.com/snipher-marube/WeekOne-OverComeYourFearBootcamp12/graphs/contributors">
