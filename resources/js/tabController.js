@@ -1,5 +1,16 @@
-const TAX_TAB_NAME = "tax-tab";
-const BILL_TAB_NAME = "bill-tab";
+/**
+ * Order of scripts in your HTML should be:
+ *    1. tabController.js
+ *    2. taxManager.js
+ *    3. billManager.js
+ */
+import * as CONSTANTS from "./constants.js";
+
+// const CONSTANTS.TAX_TAB_NAME = "tax-tab";
+// const CONSTANTS.BILL_TAB_NAME = "bill-tab";
+
+// GLOBAL SIGNAL to control adding of listeners on gross input when tabs change
+// const controller = new AbortController();
 
 // Get active tab
 // Can be tax-tab or bill-tab
@@ -17,11 +28,12 @@ const $billTabBtn = document.getElementById("bill-tab-btn");
 const $tabsContainer = document.getElementById("result");
 
 let activeTab = getOpenTab();
+window.getOpenTab = getOpenTab;
 
 const tabChangeEvent = new Event("tabChange");
 
 switch (activeTab) {
-  case BILL_TAB_NAME:
+  case CONSTANTS.BILL_TAB_NAME:
     populateBillTab();
     break;
 
@@ -44,7 +56,7 @@ function populateBillTab() {
 
   //  Setting the childNodes to null so that if it has associated
   //  listeners, they are removed by garbage collector
-  $displayArea.childNodes[0] = null;
+  // $displayArea.childNodes[0] = null;
 
   // Control active classes on open tabs
   $taxTabBtn.classList.remove(["active"]);
@@ -58,7 +70,7 @@ function populateTaxTab() {
 
   //  Setting the childNodes to null so that if it has associated
   //  listeners, they are removed by garbage collector
-  $displayArea.childNodes[0] = null;
+  // $displayArea.childNodes[0] = null;
 
   // Control active classes on open tabs
   $taxTabBtn.classList.add(["active"]);
@@ -70,24 +82,24 @@ function getOpenTab() {
 
   if (Tab) return JSON.parse(Tab);
 
-  localStorage.setItem("open-tab", JSON.stringify(TAX_TAB_NAME));
-  Tab = TAX_TAB_NAME;
+  localStorage.setItem("open-tab", JSON.stringify(CONSTANTS.TAX_TAB_NAME));
+  Tab = CONSTANTS.TAX_TAB_NAME;
   return Tab;
 }
 
 function onTaxTabBtnClick() {
   console.log("tax tab clicked");
-  if (activeTab == TAX_TAB_NAME) return;
+  if (activeTab == CONSTANTS.TAX_TAB_NAME) return;
   populateTaxTab();
-  localStorage.setItem("open-tab", JSON.stringify(TAX_TAB_NAME));
+  localStorage.setItem("open-tab", JSON.stringify(CONSTANTS.TAX_TAB_NAME));
   activeTab = getOpenTab();
   $tabsContainer.dispatchEvent(tabChangeEvent);
 }
 function onBillTabBtnClick() {
   console.log("bill tab clicked");
-  if (activeTab == BILL_TAB_NAME) return;
+  if (activeTab == CONSTANTS.BILL_TAB_NAME) return;
   populateBillTab();
-  localStorage.setItem("open-tab", JSON.stringify(BILL_TAB_NAME));
+  localStorage.setItem("open-tab", JSON.stringify(CONSTANTS.BILL_TAB_NAME));
   activeTab = getOpenTab();
   $tabsContainer.dispatchEvent(tabChangeEvent);
 }

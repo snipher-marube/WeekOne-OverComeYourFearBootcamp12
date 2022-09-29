@@ -23,28 +23,29 @@ At the end of the week, we would like each participant to have a good understand
   Eg:
 
 **NSSF Contribution** - Ksh. 1,080.00
+**NHIF Contribution** - Ksh. 1,400.00
 **Personal Relief** - Ksh. 2,400.00
 **Insurance/NHIF Relief** - Ksh. 210.00
-**NHIF Contribution** - Ksh. 1,400.00
 
 ## Manage expenses / bills (eg rent , food , entertainment)
 
-- Allow user to input a couple of key-value data eg: Netflix - 1500 , Gym - 3000 , chama / savings
-- Have default keys like rent , shopping , food
-- Display expenses and salary remainder / balance
-- Create an action to add more bills to the list
-- Create capability to edit / remove default keys
-  **BONUS** : _Add warning (color coded , preferably red) if balance after bill calculations is below 20% of total net , and green if within safe amount_
+- Allow user to input a couple of key-value data eg: Netflix - 1500 , Gym - 3000 , chama / savings.
+- Have default keys like rent , shopping , food.
+- Display expenses and salary remainder / balance.
+- Create an action to add more bills to the list.
+- Create capability to edit / remove default keys.
+
+**BONUS** : _Add warning (color coded , preferably red) if balance after bill calculations is below 20% of total net , and green if within safe amount._
 
 ## Teams page
 
-Add a teams page showcasing the members involved in creating the exercise including clickable links to their social media or Github accounts. (Agree on the design layout within the team)
-Add a teams link to the navbar
+- Add a teams page showcasing the members involved in creating the exercise including clickable links to their social media or Github accounts. (Agree on the design layout within the team)
+- Add a teams link to the navbar
 
 Link to the Natujenge SVG logo .
 Link to the Figma designs , remember this is just a guide, you’re free to add your own styles and colors to really personalize the look and feel .
 
-<h5>GIT</h5> 
+## GIT 
 How to use Gitflow (https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 Main branch
 Development branch

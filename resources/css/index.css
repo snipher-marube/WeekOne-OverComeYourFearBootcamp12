@@ -90,7 +90,7 @@
   width: 100%;
 }
 
-/* Tax Calculator Styles */
+/* Billing and Tax Calculator Header */
 
 .main_content .main_content_gross span {
   font-weight: 700;
@@ -144,6 +144,66 @@
   text-transform: capitalize;
 }
 
+.main_content .main_content_netpay {
+  opacity: 0.6;
+}
+
+.main_content .main_content_netpay span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.main_content .main_content_netpay div#netpay_input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.main_content .main_content_netpay div span {
+  background-color: #d0d3d4;
+  border-radius: 10% 0 10% 0;
+  padding: 5px 5px;
+  cursor: default;
+  font-weight: 700;
+  color: #525050;
+}
+
+.main_content .main_content_netpay div input#net-salary-view-only {
+  width: 100%;
+  border: none;
+  background-color: #eff2f5;
+  padding: 0 5px;
+  color: #525050;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: default;
+}
+
+.main_content .main_content_netpay div input:focus {
+  outline: none;
+}
+
+.main_content .main_content_netpay div button {
+  background-color: #28b463;
+  border: none;
+  border-radius: 0.5vh;
+  padding: 1vh 0.5vw;
+  cursor: pointer;
+}
+
+.main_content .main_content_netpay div button:focus {
+  outline: none;
+}
+
+.main_content .main_content_netpay div button span {
+  color: #fff;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Tax Calculator Styles */
 .main_content_result {
   background-color: #ebedef;
   margin-top: 5px;
@@ -223,89 +283,81 @@
 }
 
 /* Bill Manger Styles */
-.main_content .main_content_bills {
-  opacity: 0.6;
-}
-
-.main_content .main_content_bills span {
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.main_content .main_content_bills div#bills_input {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.main_content .main_content_bills div span {
-  background-color: #d0d3d4;
-  border-radius: 10% 0 10% 0;
-  padding: 5px 5px;
-  cursor: default;
-  font-weight: 700;
-  color: #525050;
-}
-
-.main_content .main_content_bills div input#net-salary-view-only {
-  width: 100%;
-  border: none;
-  background-color: #eff2f5;
-  padding: 0 5px;
-  color: #525050;
-  font-weight: 700;
-  font-size: 17px;
-  cursor: default;
-}
-
-.main_content .main_content_bills div input:focus {
-  outline: none;
-}
-
-.main_content .main_content_bills div button {
-  background-color: #28b463;
-  border: none;
-  border-radius: 0.5vh;
-  padding: 1vh 0.5vw;
-  cursor: pointer;
-}
-
-.main_content .main_content_bills div button:focus {
-  outline: none;
-}
-
-.main_content .main_content_bills div button span {
-  color: #fff;
-  background-color: transparent;
-  font-size: 17px;
-  font-weight: 700;
-  text-transform: capitalize;
-}
-
 .main_content_result .main_content_result_bills {
   position: relative;
   font-size: 18px;
   font-weight: 700;
 }
 
-.main_content_result .main_content_result_bills #result-bill {
-  margin-top: 3vh;
+.main_content_result .main_content_result_bills .heading {
+  margin-bottom: 0.8rem;
+}
+.main_content_result .main_content_result_bills .heading p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.main_content_result .main_content_result_bills .bill-entry {
+  padding: 10px;
   width: 100%;
   display: flex;
+  font-size: 17px;
+  position: relative;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
-.main_content_result .main_content_result_bills #result-bill div {
+.main_content_result .main_content_result_bills .bill-entry span small {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.main_content_result .main_content_result_bills .bill-entry::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 3px;
+  scale: 0;
+  background-color: rgba(61, 61, 61, 0.43);
+  transition: scale 0.15s ease-out;
+}
+
+.main_content_result .main_content_result_bills .bill-entry.unavailable {
+  opacity: 0.43;
+}
+
+.main_content_result
+  .main_content_result_bills
+  .bill-entry.unavailable::before {
+  scale: 1;
+}
+
+.main_content_result .main_content_result_bills .bill-entry .bill-entry-title {
+  text-transform: capitalize;
+}
+.main_content_result .main_content_result_bills .bill-entry .bill-entry-currency .money-sign {
+  margin-right: 5px;
+}
+/* .main_content_result .main_content_result_bills .bill-entry input {
+
+} */
+
+/* .main_content_result .main_content_result_bills #result-bill div {
   width: 50%;
   margin-left: auto;
-}
+} */
 
-.main_content_result .main_content_result_bills #result-bill:first-child {
+/* .main_content_result .main_content_result_bills #result-bill:first-child {
   opacity: 0.4;
-}
+} */
 
-.main_content_result .main_content_result_bills #result-bill div input {
+/* .main_content_result .main_content_result_bills #result-bill div input {
   border: none;
   background-color: transparent;
   font-size: 15px;
@@ -314,23 +366,23 @@
   padding: 0.5vh 1vw;
   margin-left: 0.3vw;
   width: 40%;
-}
+} */
 
-.main_content_result .main_content_result_bills #result-bill div input:focus {
+/* .main_content_result .main_content_result_bills #result-bill div input:focus {
   outline: none;
-}
+} */
 
 .main_content_result .main_content_result_bills #result-button {
   width: fit-content;
   margin-left: auto;
-  margin-top: 3vh;
+  margin-top: 5px;
 }
 
 .main_content_result .main_content_result_bills #result-button button {
   background-color: #28b463;
   border: none;
-  border-radius: 0.5vh;
-  padding: 1vh 1vw;
+  border-radius: 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -460,17 +512,17 @@
     padding: 2vh 0;
   }
   /* Bill Manger Styles */
-  .main_content .main_content_bills span {
+  .main_content .main_content_netpay span {
     font-size: 16px;
   }
-  .main_content .main_content_bills div span {
+  .main_content .main_content_netpay div span {
     padding: 1vh 2.5vw;
   }
-  .main_content .main_content_bills div input {
+  .main_content .main_content_netpay div input {
     padding: 0 1.5vw;
     font-size: 16px;
   }
-  .main_content .main_content_bills div button span {
+  .main_content .main_content_netpay div button span {
     font-size: 15px;
   }
   .main_content_result .main_content_result_bills {

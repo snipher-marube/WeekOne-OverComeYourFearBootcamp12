@@ -66,9 +66,9 @@
                     </button>
                 </div>
             </div>
-            <div class="main_content_bills" id="bills">
+            <div class="main_content_netpay" id="bills">
                 <span>Net Salary</span>
-                <div id="bills_input">
+                <div id="netpay_input">
                     <span>Ksh.</span>
                     <input type="text" id="net-salary-view-only" readonly
                         placeholder="Your net salary will be shown here">
@@ -163,69 +163,61 @@
 
     <template id="bills-content-template">
         <div class="main_content_result_bills" id="result-bills">
+            <div class="heading">
+                <p>Expense Tracker</p>
+            </div>
             <div id="result-bills-list">
-                <div id="result-bill">
+                <div id="result-bill" class="bill-entry">
                     <span>Rent</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input id="rent" type="text">
-                    </div>
+                    <span id="rent-bill">
+                        <span class="money-sign">Ksh.</span>
+                        <span class="money-value">0</span>
+                    </span>
                 </div>
             </div>
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>shopping</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input id="shopping" type="text">
-                    </div>
-                </div>
+            <!-- <div id="result-bill" class="bill-entry">
+                <span>shopping</span>
+                <span id="shopping-bill">
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
             </div>
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>Electricity</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input id="electricity-bill" type="text">
-                    </div>
-                </div>
+            <div id="result-bill" class="bill-entry">
+                <span>Electricity</span>
+                <span id="electricity-bill">
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
             </div>
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>Water Bills</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input id="water-bill" type="text">
-                    </div>
-                </div>
+            <div id="result-bill" class="bill-entry">
+                <span>Water Bills</span>
+                <span id="wter-bill">
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
             </div>
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>Transport</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input id="transport" type="text">
-                    </div>
-                </div>
+            <div id="result-bill" class="bill-entry">
+                <span>Transport</span>
+                <span id="transport-bill">
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
+            </div> -->
+
+            <div id="result-bill" class="bill-entry billing-results">
+                <span>Total Expenditure</span>
+                <span>
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
             </div>
 
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>Total</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input readonly id="total" type="text">
-                    </div>
-                </div>
-            </div>
-            <div id="result-bills-list">
-                <div id="result-bill">
-                    <span>Balance</span>
-                    <div>
-                        <span>Ksh</span>
-                        <input readonly id="balance" type="text">
-                    </div>
-                </div>
+            <div id="result-bill" class="bill-entry">
+                <span>Balance</span>
+                <span>
+                    <span class="money-sign">Ksh.</span>
+                    <span class="money-value">0</span>
+                </span>
             </div>
 
 
@@ -240,10 +232,11 @@
 
 
 
-    <script type="text/javascript" src="/resources/js/tabController.js"></script>
     <script type="text/javascript" src="/resources/js/script.js"></script>
+    <script type="module" src="/resources/js/tabController.js"></script>
+    <script type="module" src="/resources/js/taxManager.js"></script>
+    <script type="module" src="/resources/js/billManager.js"></script>
     <!-- <script type="text/javascript" src="bills.js"></script> -->
-    <script type="text/javascript" src="/resources/js/taxCalculation.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script> -->
