@@ -1,13 +1,14 @@
 # WeekOne-OverComeYourFearBootcamp12
 
-Group12 Natujenge #Overcome-Your-Fear-Bootcamp
+**Group12** Natujenge _#Overcome-Your-Fear-Bootcamp_
 
-<img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="">
+<img src="https://natujenge.ke/assets/images/logo-wordmark.svg" alt="Natujenge Logo">
 
-Natujenge SWE Virtual Boot Camp Week 01 Challenge
-Issue date: 19th September 2022
+Natujenge SWE Virtual Boot Camp Week 01 Challenge.<br>
+**Issue date: 19th September 2022**
 
-<h1>1. Objectives</h2> 
+## Objectives
+
 At the end of the week, we would like each participant to have a good understanding of the following:
 
 - Create a responsive UI for tax calculation app.
@@ -27,14 +28,16 @@ At the end of the week, we would like each participant to have a good understand
 **NHIF Contribution** - Ksh. 1,400.00
 
 ## Manage expenses / bills (eg rent , food , entertainment)
-Allow user to input a couple of key-value data eg: Netflix - 1500 , Gym - 3000 , chama / savings
-Have default keys like rent , shopping , food
-Display expenses and salary remainder / balance
-Create an action to add more bills to the list
-Create capability to edit / remove default keys
-BONUS : Add warning (color coded , preferably red) if balance after bill calculations is below 20% of total net , and green if within safe amount
 
-<h5>Teams page</h5> 
+- Allow user to input a couple of key-value data eg: Netflix - 1500 , Gym - 3000 , chama / savings
+- Have default keys like rent , shopping , food
+- Display expenses and salary remainder / balance
+- Create an action to add more bills to the list
+- Create capability to edit / remove default keys
+  **BONUS** : _Add warning (color coded , preferably red) if balance after bill calculations is below 20% of total net , and green if within safe amount_
+
+## Teams page
+
 Add a teams page showcasing the members involved in creating the exercise including clickable links to their social media or Github accounts. (Agree on the design layout within the team)
 Add a teams link to the navbar
 

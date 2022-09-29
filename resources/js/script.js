@@ -1,3 +1,5 @@
+// console.log(getOpenTab);
+
 const mql = window.matchMedia("(min-width: 992px)");
 const navLinks = document.querySelectorAll(
   "header nav.navbar ul.navbar-nav .nav-link"
