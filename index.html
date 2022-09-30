@@ -167,7 +167,7 @@
                 <p>Expense Tracker</p>
             </div>
             <div id="result-bills-list">
-                <div id="result-bill" class="bill-entry">
+                <div id="result-bill" class="bill-box-entry">
                     <span>Rent</span>
                     <span id="rent-bill">
                         <span class="money-sign">Ksh.</span>
@@ -175,36 +175,8 @@
                     </span>
                 </div>
             </div>
-            <!-- <div id="result-bill" class="bill-entry">
-                <span>shopping</span>
-                <span id="shopping-bill">
-                    <span class="money-sign">Ksh.</span>
-                    <span class="money-value">0</span>
-                </span>
-            </div>
-            <div id="result-bill" class="bill-entry">
-                <span>Electricity</span>
-                <span id="electricity-bill">
-                    <span class="money-sign">Ksh.</span>
-                    <span class="money-value">0</span>
-                </span>
-            </div>
-            <div id="result-bill" class="bill-entry">
-                <span>Water Bills</span>
-                <span id="wter-bill">
-                    <span class="money-sign">Ksh.</span>
-                    <span class="money-value">0</span>
-                </span>
-            </div>
-            <div id="result-bill" class="bill-entry">
-                <span>Transport</span>
-                <span id="transport-bill">
-                    <span class="money-sign">Ksh.</span>
-                    <span class="money-value">0</span>
-                </span>
-            </div> -->
 
-            <div id="result-bill" class="bill-entry billing-results">
+            <div id="result-bill" class="bill-box-entry billing-results">
                 <span>Total Expenditure</span>
                 <span>
                     <span class="money-sign">Ksh.</span>
@@ -212,7 +184,7 @@
                 </span>
             </div>
 
-            <div id="result-bill" class="bill-entry">
+            <div id="result-bill" class="bill-box-entry billing-balance">
                 <span>Balance</span>
                 <span>
                     <span class="money-sign">Ksh.</span>
@@ -221,12 +193,26 @@
             </div>
 
 
-            <div id="result-button">
-                <button onclick="showModal()">
-                    <span>Add</span>
+            <div id="bill-box-entry-controls">
+                <button onclick="" class="btn btn-primary" id="edit-expenses">
+                    edit expenses
                 </button>
             </div>
         </div>
+    </template>
+    <template id="bill-box-entry-template-structure">
+        <span class="bill-box-entry bill-box-entry-edit-mode">
+            <span>
+                <input type="text" required="" name="rent" class="expense-name" />
+            </span>
+            <span>
+                <span class="money-sign">Ksh.</span>
+                <input type="number" required="" name="rent-amount" class="expense-money-value" />
+            </span>
+            <span class="bill-item-action-box">
+                <img src="/resources/icons/delete.png" class="delete-action-icon" width="25">
+            </span>
+        </span>
     </template>
 
 

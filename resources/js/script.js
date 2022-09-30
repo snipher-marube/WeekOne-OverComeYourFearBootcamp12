@@ -20,12 +20,15 @@ const homePageRegex = /\/index((\.html|\.htm)#?)?$/;
 const aboutPageRegex = /\/about((\.html|\.htm)#?)?$/;
 const teamPageRegex = /\/team((\.html|\.htm)#?)?$/;
 
-if (homePageRegex.test(pathname))
+if (homePageRegex.test(pathname)) {
   navLinksToArray[0].classList.add(["currentopen"]);
-if (aboutPageRegex.test(pathname))
+} else if (aboutPageRegex.test(pathname)) {
   navLinksToArray[1].classList.add(["currentopen"]);
-if (teamPageRegex.test(pathname))
+} else if (teamPageRegex.test(pathname)) {
   navLinksToArray[2].classList.add(["currentopen"]);
+} else {
+  navLinksToArray[0].classList.add(["currentopen"]);
+}
 
 // Disable hover on navItems when in large ViewPort
 function noNavItemHoverOnLgScreen() {
