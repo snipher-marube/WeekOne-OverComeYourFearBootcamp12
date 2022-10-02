@@ -26,6 +26,7 @@ const $billTemplateContent = document.querySelector(
 const $taxTabBtn = document.getElementById("tax-tab-btn");
 const $billTabBtn = document.getElementById("bill-tab-btn");
 const $tabsContainer = document.getElementById("result");
+const $tabBtns = document.getElementsByClassName("tab");
 
 let activeTab = getOpenTab();
 window.getOpenTab = getOpenTab;
@@ -42,6 +43,17 @@ switch (activeTab) {
     break;
 }
 
+// Add listeners on tabs for keyboard interaction when focused by keyboard navigation
+Array.from($tabBtns).forEach((tabBtn) => {
+  tabBtn.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
+      event.target.blur();
+    }
+    if (event.key !== "Enter") return;
+    event.target.click();
+  });
+});
+
 // Add listeners to tab button
 $taxTabBtn.addEventListener("click", onTaxTabBtnClick);
 $billTabBtn.addEventListener("click", onBillTabBtnClick);
@@ -50,7 +62,6 @@ function populateBillTab() {
   let $billContent = $billTemplateContent.content
     .cloneNode(true)
     .querySelector(".main_content_result_bills");
-  // console.log($billContent);
   // $displayArea.appendChild($billContent);
   $displayArea.replaceChild($billContent, $displayArea.childNodes[0]);
 
@@ -88,7 +99,6 @@ function getOpenTab() {
 }
 
 function onTaxTabBtnClick() {
-  console.log("tax tab clicked");
   if (activeTab == CONSTANTS.TAX_TAB_NAME) return;
   populateTaxTab();
   localStorage.setItem("open-tab", JSON.stringify(CONSTANTS.TAX_TAB_NAME));
@@ -96,7 +106,6 @@ function onTaxTabBtnClick() {
   $tabsContainer.dispatchEvent(tabChangeEvent);
 }
 function onBillTabBtnClick() {
-  console.log("bill tab clicked");
   if (activeTab == CONSTANTS.BILL_TAB_NAME) return;
   populateBillTab();
   localStorage.setItem("open-tab", JSON.stringify(CONSTANTS.BILL_TAB_NAME));

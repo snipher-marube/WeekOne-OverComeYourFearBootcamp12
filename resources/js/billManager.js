@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", loadBillApplication);
 // because they are defined in tabController.js that is not a type=module
 
 const $grossInput = document.getElementById("gross-input-input");
-let $netSalaryViewOnlyInput = document.getElementById("net-salary-view-only");
+const $netSalaryViewOnlyInput = document.getElementById("net-salary-view-only");
 
 let $billEntriesContainer = document.getElementById("result-bills-list");
 let $billEntryControls = document.getElementById("bill-box-entry-controls");
@@ -32,20 +32,17 @@ let $addNewExpenseBtn = document.querySelector(
   "button#add-new-bill-entry-expense"
 );
 let $deleteExpenseEntryBtn = document.querySelectorAll(".delete-action-icon");
+let $totalExpenditureResults = document.querySelector(".billing-results");
+let $remainingBalance = document.querySelector(".billing-balance");
 
-/* ------WHEN TABS CHANGE START------- */
+/* ------WHEN TABS CHANGE - START------- */
 const $tabsContainer = document.getElementById("result");
-$tabsContainer.addEventListener("tabChange", (e) => {
-  let grossInputInitial;
-  $grossInput.value ? (grossInputInitial = $grossInput.value) : 0;
-  $grossInput.disabled = false;
-  loadBillApplication(e, grossInputInitial);
-});
-/* ------WHEN TABS CHANGE END------ */
+$tabsContainer.addEventListener("tabChange", loadBillApplication);
+/* ------WHEN TABS CHANGE - END------ */
 
 const expensesArr = [
   {
-    expense: "rent",
+    expense: "Rent",
     amount: 2000,
   },
   {
@@ -58,7 +55,8 @@ const expensesArr = [
   },
 ];
 
-function loadBillApplication(e, grossInputInitial) {
+function loadBillApplication() {
+  $grossInput.disabled = false;
   if (getOpenTab() !== CONSTANTS.BILL_TAB_NAME) {
     // removing gross input listener when different tab is opened
     $grossInput.removeEventListener("input", runBillingLogic, true);
@@ -75,47 +73,71 @@ function loadBillApplication(e, grossInputInitial) {
   }
 
   // Rehydrate DOM elements
-  $billEntriesContainer = document.getElementById("result-bills-list");
   $billEntryControls = document.getElementById("bill-box-entry-controls");
   $editExpensesBtn = $billEntryControls?.querySelector("button#edit-expenses");
-  $cancelExpensesBtn = $billEntryControls?.querySelector(
-    "button#cancel-edit-expenses"
-  );
-  $addNewExpenseBtn = document.querySelector(
-    "button#add-new-bill-entry-expense"
-  );
-  $deleteExpenseEntryBtn = document.querySelectorAll(".delete-action-icon");
 
-  // Allows to run taxcalculation when we have a value in gross input field.
-  // Helpful when you switch back to a Tab
-  if (grossInputInitial) {
-    runTaxLogic(undefined, grossInputInitial);
-
-    // After run, remove the value to allow oninput listener to fully
-    // control the logic
-    grossInputInitial = undefined;
-  }
+  injectExpensesOnDOM_NonEditMode();
+  runBillingLogic();
 
   $grossInput.addEventListener("input", runBillingLogic, true);
   $editExpensesBtn?.addEventListener("click", onEditExpenses);
-
-  injectExpensesOnDOM_NonEditMode();
 }
 
 // Logic for Billing
-function runBillingLogic(event, grossInitial) {
-  const grossValue = parseFloat(event?.target?.value || grossInitial);
-  const taxationResults = calculateTax(event, grossInitial);
+function runBillingLogic(event) {
+  // Rehydrate DOM elements
+  $totalExpenditureResults = document.querySelector(".billing-results");
+  $remainingBalance = document.querySelector(".billing-balance");
+  const $balanceWarning = document.querySelector(".bill-box-entry-warning");
 
-  updateDOMWithbillingResults(taxationResults);
-}
+  let grossInputInitial;
+  $grossInput.value ? (grossInputInitial = $grossInput.value) : 0;
+  const grossValue = parseFloat(event?.target?.value || grossInputInitial);
+  const taxationResults = calculateTax(grossValue);
 
-function updateDOMWithbillingResults(payload) {
-  // $netSalaryViewOnlyInput = document.getElementById("net-salary-view-only");
-  console.log("updateDOMWithbillingResults HAS RUN");
-  $netSalaryViewOnlyInput.value = new Intl.NumberFormat().format(
-    payload.netPay
-  );
+  const netSalary = taxationResults.netPay;
+
+  const totalExpenses = expensesArr.reduce((acc, curr) => {
+    return acc + curr.amount;
+  }, 0);
+
+  const balance = Math.round((netSalary - totalExpenses) * 100) / 100;
+
+  // Inject bill total and balance to DOM
+  let $totalExpenditureResultsMoneyValue =
+    $totalExpenditureResults.querySelector(".money-value");
+  let $remainingBalanceMoneyValue =
+    $remainingBalance.querySelector(".money-value");
+
+  /* Add warning (color coded , preferably red) if balance after bill calculations
+  is below 20% of total net , and green if within safe amount. */
+  if (grossInputInitial > 0) {
+    const _20PercentOfNetSalary = netSalary * 0.2;
+    if (balance < _20PercentOfNetSalary) {
+      $remainingBalance.style.color = "#dc3545";
+      $balanceWarning.textContent = "Your balance is below 20% of net salary!";
+      $balanceWarning.classList.add("low-balance");
+      $balanceWarning.classList.remove("safe-balance");
+    } else {
+      $remainingBalance.style.color = "#198754";
+      $balanceWarning.classList.add("safe-balance");
+      $balanceWarning.classList.remove("low-balance");
+    }
+  } else {
+    $remainingBalance.style.color = "inherit";
+    $balanceWarning.classList.remove("safe-balance", "low-balance");
+  }
+
+  $netSalaryViewOnlyInput.value = new Intl.NumberFormat().format(netSalary);
+  $totalExpenditureResultsMoneyValue.textContent =
+    new Intl.NumberFormat().format(totalExpenses);
+  if (grossInputInitial > 0) {
+    $remainingBalanceMoneyValue.textContent = new Intl.NumberFormat().format(
+      balance
+    );
+  } else {
+    $remainingBalanceMoneyValue.textContent = "---";
+  }
 }
 
 function onEditExpenses() {
@@ -153,6 +175,7 @@ function injectExpensesOnDOM_EditMode() {
     const billEntryExpenseNameInput = document.createElement("input");
     billEntryExpenseNameInput.type = "text";
     billEntryExpenseNameInput.required = true;
+    billEntryExpenseNameInput.min = "0";
     billEntryExpenseNameInput.value = item.expense;
     billEntryExpenseNameInput.name = item.expense.replace(/\s/g, "-");
     billEntryExpenseNameInput.className = "expense-name";
@@ -167,6 +190,7 @@ function injectExpensesOnDOM_EditMode() {
     const billEntryMoneyValueInput = document.createElement("input");
     billEntryMoneyValueInput.type = "number";
     billEntryMoneyValueInput.required = true;
+    billEntryMoneyValueInput.min = "0";
     billEntryMoneyValueInput.name =
       item.expense.replace(/\s/g, "-") + "-amount";
     billEntryMoneyValueInput.value = item.amount;
@@ -212,6 +236,7 @@ function injectExpensesOnDOM_EditMode() {
 }
 
 function injectExpensesOnDOM_NonEditMode() {
+  $billEntriesContainer = document.getElementById("result-bills-list");
   while ($billEntriesContainer.firstChild) {
     $billEntriesContainer.firstChild.remove();
   }
@@ -295,6 +320,7 @@ function onSaveExpenses(event) {
   unregisterNewEntryControlListeners();
 
   injectExpensesOnDOM_NonEditMode();
+  runBillingLogic();
 
   // Modify Controls to NonEdit Mode
   controlsModifier({ mode: "noedit" });

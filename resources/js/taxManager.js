@@ -89,7 +89,7 @@ function runTaxLogic(event, grossInitial) {
   }
 
   // We receive an object with calculated tax results
-  const taxationResults = calculateTax(event, grossInitial);
+  const taxationResults = calculateTax(grossValue, grossInitial);
 
   // console.log(taxationResults);
   // Inject the tax results received to the DOM

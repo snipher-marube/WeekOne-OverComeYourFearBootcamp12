@@ -51,9 +51,9 @@
 
 .main {
   margin-top: 2vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
   font-size: 20px;
-  padding: 2vh 2vw;
+  padding: 10px 15px;
   margin: auto;
   width: 40vw;
 }
@@ -61,29 +61,35 @@
 .main_top {
   display: flex;
   font-weight: 700;
-  margin-bottom: 1vh;
-  cursor: pointer;
+  margin-bottom: 10px;
+  column-gap: 40px;
 }
 
-.main_top div.active {
+.main_top div.tab {
   position: relative;
+  cursor: pointer;
+  padding-inline: 10px;
+  border-radius: 5px;
 }
 
-.main_top div.active::after {
+.main_top div.tab:focus {
+  outline: 1.2px solid;
+}
+
+.main_top div.tab::after {
   content: "";
   position: absolute;
-  width: 86%;
-  transform: scaleX(1);
-  height: 3px;
-  max-height: 0.3vh;
-  bottom: 0;
+  top: 100%;
   left: 0;
-  background-color: #28b463;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #0a9644;
+  transform: scaleX(0);
+  transition: transform 200ms;
 }
-
-.main_top div span:first-child {
-  margin-right: 4vw;
-  margin-bottom: 1vh;
+.main_top div.active::after {
+  transform: scaleX(1);
 }
 
 .main_content {
@@ -118,6 +124,7 @@
   background-color: #ebedef;
   padding: 0 0.5vw;
   font-size: 17px;
+  text-align: center;
 }
 
 .main_content .main_content_gross div input:focus {
@@ -145,42 +152,49 @@
 }
 
 .main_content .main_content_netpay {
-  opacity: 0.6;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbfdfd;
+  margin-bottom: -6px;
 }
 
 .main_content .main_content_netpay span {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 18px;
 }
 
 .main_content .main_content_netpay div#netpay_input {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: auto;
 }
 
 .main_content .main_content_netpay div span {
-  background-color: #d0d3d4;
-  border-radius: 10% 0 10% 0;
+  /* background-color: #d0d3d4;
+  border-radius: 10% 0 10% 0; */
   padding: 5px 5px;
   cursor: default;
-  font-weight: 700;
+  font-weight: 500;
   color: #525050;
 }
 
 .main_content .main_content_netpay div input#net-salary-view-only {
-  width: 100%;
+  min-width: 200px;
   border: none;
-  background-color: #eff2f5;
+  background-color: transparent;
   padding: 0 5px;
   color: #525050;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
   cursor: default;
+  text-align: center;
 }
 
-.main_content .main_content_netpay div input:focus {
-  outline: none;
+.main_content .main_content_netpay div input#net-salary-view-only::placeholder {
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .main_content .main_content_netpay div button {
@@ -396,10 +410,35 @@
 .main_content_result
   .main_content_result_bills
   .bill-box-entry.billing-balance {
+  flex-wrap: wrap;
   border-bottom: 1.6px solid rgba(128, 128, 128, 0.3);
   border-right: 1.6px solid rgba(128, 128, 128, 0.3);
 }
-
+.main_content_result
+  .main_content_result_bills
+  .bill-box-entry.billing-balance
+  .bill-box-entry-warning {
+  width: 100%;
+  color: inherit;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: end;
+  display: none;
+}
+.main_content_result
+  .main_content_result_bills
+  .bill-box-entry.billing-balance
+  .bill-box-entry-warning.low-balance {
+  color: #dc3545;
+  display: inline-block;
+}
+.main_content_result
+  .main_content_result_bills
+  .bill-box-entry.billing-balance
+  .bill-box-entry-warning.safe-balance {
+  color: #198754;
+}
 /* .main_content_result .main_content_result_bills .bill-box-entry input {
 
 } */
@@ -476,28 +515,6 @@ button.btn-secondary {
   background-color: #8f8f80;
   text-transform: capitalize;
 }
-
-/* .main_content_result .main_content_result_bills #bill-box-entry-controls button span {
-  
-} */
-
-/* .main_content_result .main_content_result_tax div span:last-child {
-  text-transform: uppercase;
-  margin-right: 3vw;
-} */
-
-.main_content_result .main_content_result_tax .main_content_result_footer {
-  /* cursor: pointer;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: -2vw; */
-}
-
-/* .main_content_result .main_content_result_tax .main_content_result_footer span {
-  color: #38acec;
-  font-weight: 500;
-  text-transform: lowercase !important;
-} */
 
 .modal {
   position: absolute;

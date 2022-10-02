@@ -1,7 +1,7 @@
 import * as CONSTANTS from "./constants.js";
 
-function calculateTax(event, grossInitial) {
-  const grossValue = parseFloat(event?.target?.value || grossInitial);
+function calculateTax(value, grossInitial) {
+  const grossValue = parseFloat(value || grossInitial);
   // console.log("calc tax ran", grossValue);
   const deductionsBeforeTax =
     CONSTANTS.NHIFContribution + CONSTANTS.NSSFContribution;
