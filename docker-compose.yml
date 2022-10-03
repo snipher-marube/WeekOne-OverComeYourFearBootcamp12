@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  web:
+    container_name: taxman_app
+    image: taxman:1.0.0
+    build: .
+    ports:
+      - "5000:8000"
