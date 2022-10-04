@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   web:
-    container_name: taxcalc_app
-    image: taxcalc:v1
+    container_name: taxcalc_appv6
+    image: boniface09887/taxcalc:v6
     build: .
     ports:
       - "4000:8000"
